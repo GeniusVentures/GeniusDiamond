@@ -27,15 +27,15 @@ export async function setNFTProxyRoleForOpenSea(CallbackArgs: CallbackArgs) {
   const deployerDiamondContract = geniusDiamond.connect(deployer);
 
   // TODO This is not working because it is relying on the deployInclude functionality working for function selectors.
-  // const NFTProxyRole = await geniusDiamond.NFT_PROXY_OPERATOR_ROLE({ gasLimit: 600000 });
+  const NFTProxyRole = await geniusDiamond.NFT_PROXY_OPERATOR_ROLE({ gasLimit: 600000 });
 
-  // // allow OpenSea Proxy Operator
-  // if (networkName in OpenSeaProxyAddresses) {
-  //   const proxyAddress: string = OpenSeaProxyAddresses[networkName];
-  //   try {
-  //     geniusDiamond.grantRole(NFTProxyRole, proxyAddress, { gasLimit: 600000 });
-  //   } catch (e) {
-  //     debuglog(`Warning, couldn't grant proxy role for ${networkName} OpenSea NFT contract at ${proxyAddress}\n${e}`);
-  //   }
-  // }
+  // allow OpenSea Proxy Operator
+  if (networkName in OpenSeaProxyAddresses) {
+    const proxyAddress: string = OpenSeaProxyAddresses[networkName];
+    try {
+      geniusDiamond.grantRole(NFTProxyRole, proxyAddress, { gasLimit: 600000 });
+    } catch (e) {
+      debuglog(`Warning, couldn't grant proxy role for ${networkName} OpenSea NFT contract at ${proxyAddress}\n${e}`);
+    }
+  }
 }

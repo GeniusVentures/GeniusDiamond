@@ -44,7 +44,8 @@
         "0.0": {
           "deployInit": "GNUSNFTFactory_Initialize()"
         },
-        "2.3": {
+        "2.5": {
+          "deployInit": "GNUSNFTFactory_Initialize230()",
           "upgradeInit": "GNUSNFTFactory_Initialize230()",
           "fromVersions": [
             0.0,
@@ -57,6 +58,9 @@
       "priority": 70,
       "versions": {
         "0.0": {
+          "deployInit": "GeniusAI_Initialize()"
+        },
+        "2.5": {
           "deployInit": "GeniusAI_Initialize()"
         }
       }
@@ -89,6 +93,12 @@
         }
       }
     },
+    "GNUSNFTCollectionName": { 
+      "priority": 80,
+      "versions": {
+        "0.0":{}
+      } 
+    },
     "GNUSControl": {
       "priority": 110,
       "versions": {
@@ -97,14 +107,8 @@
             "registerProtocolVersionChainId" 
           ]
         },
-        "2.3": {
+        "2.5": {
           "deployInit": "GNUSControl_Initialize230()"
-        },
-        "2.4": {
-          "fromVersions": [
-            0.0,
-            2.3
-          ]
         }
       }
     },
