@@ -12,29 +12,30 @@ const OpenSeaProxyAddresses: { [key: string]: string } = {
 };
 
 export async function setNFTProxyRoleForOpenSea(CallbackArgs: CallbackArgs) {
-  debuglog("In ERC1155ProxyOperator after Deploy function");
+  // console.log("Starting ERC1155ProxyOperator callback setNFTPRoxyRoleForOpenSea");
   const { diamond } = CallbackArgs;
 
   // Get the GeniusDiamond instance
   const diamondName = diamond.diamondName;
   const networkName = diamond.networkName;
-  const deployer = diamond.deployer;
-  const deployInfo = diamond.getDeployInfo();
+  const deployer = diamond.signer!;
+  const deployInfo = diamond.getDeployedDiamondData();
   const diamondAddress = deployInfo.DiamondAddress;
   const diamondArtifactName = `hardhat-diamond-abi/HardhatDiamondABI.sol:${diamondName}`;
   const diamondArtifact = hre.artifacts.readArtifactSync(diamondArtifactName);
   const geniusDiamond = new hre.ethers.Contract(diamondAddress, diamondArtifact.abi, diamond.provider) as GeniusDiamond;
   const deployerDiamondContract = geniusDiamond.connect(deployer);
 
-  const NFTProxyRole = await geniusDiamond.NFT_PROXY_OPERATOR_ROLE({ gasLimit: 600000 });
+  // TODO This is not working because it is relying on the deployInclude functionality working for function selectors.
+  // const NFTProxyRole = await geniusDiamond.NFT_PROXY_OPERATOR_ROLE({ gasLimit: 600000 });
 
-  // allow OpenSea Proxy Operator
-  if (networkName in OpenSeaProxyAddresses) {
-    const proxyAddress: string = OpenSeaProxyAddresses[networkName];
-    try {
-      geniusDiamond.grantRole(NFTProxyRole, proxyAddress, { gasLimit: 600000 });
-    } catch (e) {
-      debuglog(`Warning, couldn't grant proxy role for ${networkName} OpenSea NFT contract at ${proxyAddress}\n${e}`);
-    }
-  }
+  // // allow OpenSea Proxy Operator
+  // if (networkName in OpenSeaProxyAddresses) {
+  //   const proxyAddress: string = OpenSeaProxyAddresses[networkName];
+  //   try {
+  //     geniusDiamond.grantRole(NFTProxyRole, proxyAddress, { gasLimit: 600000 });
+  //   } catch (e) {
+  //     debuglog(`Warning, couldn't grant proxy role for ${networkName} OpenSea NFT contract at ${proxyAddress}\n${e}`);
+  //   }
+  // }
 }
