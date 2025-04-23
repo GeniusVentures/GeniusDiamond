@@ -1,5 +1,5 @@
 {
-  "protocolVersion": 2.5,
+  "protocolVersion": 2.41,
   "protocolInitFacet": "",
   "facets": {
     "DiamondCutFacet": {
@@ -12,24 +12,6 @@
       "priority": 20,
       "versions": {
         "0.0": {}
-      }
-    },
-    "DiamondInitFacet": {
-      "priority": 25,
-      "versions": {
-        "0.0": {
-          "deployInit": "diamondInitialize250()"
-        },
-        "2.5": {
-          "deployInit": "diamondInitialize250()",
-          "upgradeInit": "diamondInitialize250()",
-          "fromVersions": [
-            0.0,
-            2.2,
-            2.3,
-            2.41
-          ]
-        }
       }
     },
     "GeniusOwnershipFacet": {
@@ -51,14 +33,6 @@
             0.0,
             2.0
           ]
-        }
-      }
-    },
-    "GeniusAI": {
-      "priority": 70,
-      "versions": {
-        "0.0": {
-          "deployInit": "GeniusAI_Initialize()"
         }
       }
     },
