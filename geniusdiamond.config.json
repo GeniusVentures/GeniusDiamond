@@ -1,6 +1,7 @@
 {
   "protocolVersion": 2.5,
-  "protocolInitFacet": "",
+  "protocolInitFacet": "DiamondInitFacet",
+  "protocolExcludeFuncSelectors": [],
   "facets": {
     "DiamondCutFacet": {
       "priority": 10,
@@ -12,25 +13,6 @@
       "priority": 20,
       "versions": {
         "0.0": {}
-      }
-    },
-    "DiamondInitFacet": {
-      "priority": 25,
-      "versions": {
-        "0.0": {
-          "deployInit": "diamondInitialize250()"
-        },
-        "2.5": {
-          "deployInit": "diamondInitialize250()",
-          "upgradeInit": "diamondInitialize250()",
-          "fromVersions": [
-            0.0,
-            2.2,
-            2.3,
-            2.4,
-            2.41
-          ]
-        }
       }
     },
     "GeniusOwnershipFacet": {
@@ -55,6 +37,18 @@
         }
       }
     },
+    "ERC1155ProxyOperator": {
+      "priority": 45,
+      "versions": {
+        "0.0": {
+          "callbacks": [
+            "setNFTProxyRoleForOpenSea"
+          ],
+          "deployInclude": [
+          ]
+        }
+      }
+    },
     "GeniusAI": {
       "priority": 70,
       "versions": {
@@ -69,33 +63,17 @@
         "2.0": {}
       }
     },
-    "GNUSContractAssets": {
-      "priority": 100,
-      "versions": {
-        "0.0": {}
-      }
-    },
-    "ERC1155ProxyOperator": {
-      "priority": 45,
-      "versions": {
-        "0.0": {
-          "callbacks": [
-            "setNFTProxyRoleForOpenSea"
-          ],
-          "deployInclude": [
-            "isApprovedForAll(address,address)')",
-            "getSighash('function totalSupply(uint256)')",
-            "getSighash('function creators(uint256)')",
-            "getSighash('function NFT_PROXY_OPERATOR_ROLE()')"
-          ]
-        }
-      }
-    },
     "GNUSNFTCollectionName": { 
       "priority": 80,
       "versions": {
         "0.0":{}
       } 
+    },
+    "GNUSContractAssets": {
+      "priority": 100,
+      "versions": {
+        "0.0": {}
+      }
     },
     "GNUSControl": {
       "priority": 110,
@@ -111,9 +89,28 @@
       }
     },
     "GNUSBridge": {
-      "priority": 110,
+      "priority": 120,
       "versions": {
         "0.0": {}
+      }
+    },
+    "DiamondInitFacet": {
+      "priority": 130,
+      "versions": {
+        "0.0": {
+          "deployInit": "diamondInitialize250()"
+        },
+        "2.5": {
+          "deployInit": "diamondInitialize250()",
+          "upgradeInit": "diamondInitialize250()",
+          "fromVersions": [
+            0.0,
+            2.2,
+            2.3,
+            2.4,
+            2.41
+          ]
+        }
       }
     }
   }

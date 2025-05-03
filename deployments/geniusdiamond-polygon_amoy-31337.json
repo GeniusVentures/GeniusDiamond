@@ -151,9 +151,6 @@
     }
   },
   "ExternalLibraries": {
-    "BurnVerifier": "0x9bCd7Da4Bf573b19e784e9dCfA6279a9D53e376F",
-    "ZetherVerifier": "0x51e99a3A30B3B69EbFfA078aF54d25115a163EE8",
-    "libEncryption": "0xC28B43882F86634B20C48fABCa1479523Eb43CD8"
   },
   "protocolVersion": 2.4
 }
