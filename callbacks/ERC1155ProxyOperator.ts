@@ -1,9 +1,10 @@
 import { GeniusDiamond } from "../../../typechain-types";
 import hre from "hardhat";
-import { debuglog, CallbackArgs } from "@gnus.ai/diamonds";
+import { debuglog, CallbackArgs } from "diamonds";
+import { id } from "ethers";
 
 // Define or import NFTProxyRole
-const NFTProxyRole = hre.ethers.utils.id("NFT_PROXY_ROLE");
+const NFTProxyRole = id("NFT_PROXY_ROLE");
 
 const OpenSeaProxyAddresses: { [key: string]: string } = {
   mumbai: "",
