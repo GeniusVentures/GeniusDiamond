@@ -94,11 +94,11 @@
         "0.0": {}
       }
     },
-    "GNUSBlacklistV2Facet": {
+    "GNUSBlacklistFacet": {
       "priority": 46,
       "versions": {
         "0.0": {
-          "deployInit": "initializeBlacklistV2()"
+          "deployInit": "initializeBlacklist()"
         }
       }
     },
