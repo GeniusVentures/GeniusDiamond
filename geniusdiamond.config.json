@@ -94,6 +94,22 @@
         "0.0": {}
       }
     },
+    "GNUSBlacklistV2Facet": {
+      "priority": 46,
+      "versions": {
+        "0.0": {
+          "deployInit": "initializeBlacklistV2()"
+        }
+      }
+    },
+    "GNUSWhitelistFacet": {
+      "priority": 47,
+      "versions": {
+        "0.0": {
+          "deployInit": "initializeWhitelist()"
+        }
+      }
+    },
     "DiamondInitFacet": {
       "priority": 130,
       "versions": {

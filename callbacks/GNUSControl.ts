@@ -2,6 +2,8 @@ import { GeniusDiamond } from "../../../typechain-types";
 import { debuglog, CallbackArgs } from "diamonds";
 import hre from "hardhat";
 import util from "util";
+import { Contract } from "ethers";
+import "@nomiclabs/hardhat-ethers";
 
 /**
  * 
@@ -27,11 +29,11 @@ export async function registerProtocolVersionChainId(callbackArgs: CallbackArgs)
   try {
     const diamondArtifactName = `hardhat-diamond-abi/HardhatDiamondABI.sol:${diamondName}`;
     const diamondArtifact = hre.artifacts.readArtifactSync(diamondArtifactName);
-    diamondContract = new hre.ethers.Contract(diamondAddress, diamondArtifact.abi, diamond.provider as any) as unknown as GeniusDiamond;
+    diamondContract = new hre.ethers.Contract(diamondAddress, diamondArtifact.abi, diamond.provider as any);
   } catch (error) {
     console.warn(`Warning: Could not find hardhat-diamond-abi artifact for ${diamondName}, using ethers.getContractAt`);
     // Fallback to using ethers.getContractAt with a known facet
-    diamondContract = await hre.ethers.getContractAt('GNUSControl', diamondAddress) as unknown as GeniusDiamond;
+    diamondContract = await hre.ethers.getContractAt('GNUSControl', diamondAddress);
   }
   
   const deployerDiamondContract = diamondContract.connect(deployer);

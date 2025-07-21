@@ -1,7 +1,7 @@
-import { GeniusDiamond } from "../../../typechain-types";
 import hre from "hardhat";
 import { debuglog, CallbackArgs } from "diamonds";
 import { id } from "ethers";
+import { Contract } from "ethers";
 
 // Define or import NFTProxyRole
 const NFTProxyRole = id("NFT_PROXY_ROLE");
