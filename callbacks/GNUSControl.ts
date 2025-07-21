@@ -1,9 +1,7 @@
-import { GeniusDiamond } from "../../../typechain-types";
+import { GeniusDiamond } from "../../../diamond-typechain-types";
 import { debuglog, CallbackArgs } from "diamonds";
-import hre from "hardhat";
 import util from "util";
-import { Contract } from "ethers";
-import "@nomiclabs/hardhat-ethers";
+import { loadDiamondContract } from "../../../scripts/utils/loadDiamondArtifact";
 
 /**
  * 
@@ -22,28 +20,20 @@ export async function registerProtocolVersionChainId(callbackArgs: CallbackArgs)
 
   debuglog('UnitTest:log', `In GNUSControl callback function for networkName: ${networkName}  chainID: ${chainID}`);
 
-  const diamondAddress = diamond.getDeployedDiamondData().DiamondAddress!;
+  const deployedDiamondData = diamond.getDeployedDiamondData();
   
   // Try to get the diamond artifact - if it doesn't exist, use ethers.getContractAt
-  let diamondContract: GeniusDiamond;
-  try {
-    const diamondArtifactName = `hardhat-diamond-abi/HardhatDiamondABI.sol:${diamondName}`;
-    const diamondArtifact = hre.artifacts.readArtifactSync(diamondArtifactName);
-    diamondContract = new hre.ethers.Contract(diamondAddress, diamondArtifact.abi, diamond.provider as any);
-  } catch (error) {
-    console.warn(`Warning: Could not find hardhat-diamond-abi artifact for ${diamondName}, using ethers.getContractAt`);
-    // Fallback to using ethers.getContractAt with a known facet
-    diamondContract = await hre.ethers.getContractAt('GNUSControl', diamondAddress);
-  }
-  
-  const deployerDiamondContract = diamondContract.connect(deployer);
+  let geniusDiamond: GeniusDiamond;
+  // Load the Diamond contract using the utility function
+  geniusDiamond = await loadDiamondContract(diamond, deployedDiamondData.DiamondAddress!);
+  const deployerDiamondContract = geniusDiamond.connect(deployer);
 
   try {
     await deployerDiamondContract.setChainID(chainID);
     const protocolVersion = deployInfo.protocolVersion || 0.0;
     await deployerDiamondContract.setProtocolVersion(Math.round(protocolVersion * 100));
 
-    const info = await diamondContract.protocolInfo();
+    const info = await geniusDiamond.protocolInfo();
     debuglog(`protocol info: \n${util.inspect(info)}`);
   } catch (error) {
     console.warn(`Warning: Could not set protocol info for ${diamondName}:`, error);
