@@ -44,8 +44,7 @@
           "callbacks": [
             "setNFTProxyRoleForOpenSea"
           ],
-          "deployInclude": [
-          ]
+          "deployInclude": []
         }
       }
     },
@@ -63,11 +62,11 @@
         "2.0": {}
       }
     },
-    "GNUSNFTCollectionName": { 
+    "GNUSNFTCollectionName": {
       "priority": 80,
       "versions": {
-        "0.0":{}
-      } 
+        "0.0": {}
+      }
     },
     "GNUSContractAssets": {
       "priority": 100,
@@ -79,8 +78,8 @@
       "priority": 110,
       "versions": {
         "0.0": {
-          "callbacks":[ 
-            "registerProtocolVersionChainId" 
+          "callbacks": [
+            "registerProtocolVersionChainId"
           ]
         },
         "2.3": {
@@ -92,22 +91,6 @@
       "priority": 120,
       "versions": {
         "0.0": {}
-      }
-    },
-    "GNUSBlacklistFacet": {
-      "priority": 46,
-      "versions": {
-        "0.0": {
-          "deployInit": "initializeBlacklist()"
-        }
-      }
-    },
-    "GNUSWhitelistFacet": {
-      "priority": 47,
-      "versions": {
-        "0.0": {
-          "deployInit": "initializeWhitelist()"
-        }
       }
     },
     "DiamondInitFacet": {
