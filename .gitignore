@@ -1,0 +1,5 @@
+deployments/*-hardhat*
+deployments/*-localhost*
+deployments/rpc/
+deployments/defender/
+deployments/*-invalid_network-999999.json
