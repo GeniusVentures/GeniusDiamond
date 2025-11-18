@@ -52,9 +52,6 @@
       "priority": 45,
       "versions": {
         "0.0": {
-          "callbacks": [
-            "setNFTProxyRoleForOpenSea"
-          ],
           "deployInclude": [
             "isApprovedForAll(address,address)')",
             "getSighash('function totalSupply(uint256)')",
@@ -74,9 +71,6 @@
       "priority": 110,
       "versions": {
         "0.0": {
-          "callbacks":[ 
-            "registerProtocolVersionChainId" 
-          ]
         },
         "2.3": {
           "deployInit": "GNUSControl_Initialize230()"

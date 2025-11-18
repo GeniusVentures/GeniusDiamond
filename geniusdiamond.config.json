@@ -41,10 +41,8 @@
       "priority": 45,
       "versions": {
         "0.0": {
-          "callbacks": [
-            "setNFTProxyRoleForOpenSea"
-          ],
-          "deployInclude": []
+          "deployInclude": [
+          ]
         }
       }
     },
@@ -62,11 +60,11 @@
         "2.0": {}
       }
     },
-    "GNUSNFTCollectionName": {
+    "GNUSNFTCollectionName": { 
       "priority": 80,
       "versions": {
-        "0.0": {}
-      }
+        "0.0":{}
+      } 
     },
     "GNUSContractAssets": {
       "priority": 100,
@@ -78,9 +76,6 @@
       "priority": 110,
       "versions": {
         "0.0": {
-          "callbacks": [
-            "registerProtocolVersionChainId"
-          ]
         },
         "2.3": {
           "deployInit": "GNUSControl_Initialize230()"
