@@ -96,6 +96,12 @@
       }
     },
     "GNUSBridge": {
+      "priority": 115,
+      "versions": {
+        "0.0": {}
+      }
+    },
+    "GNUSWithdrawLimiter": {
       "priority": 120,
       "versions": {
         "0.0": {}
