@@ -53,25 +53,23 @@
       "versions": {
         "0.0": {
           "deployInclude": [
-            "isApprovedForAll(address,address)')",
-            "getSighash('function totalSupply(uint256)')",
-            "getSighash('function creators(uint256)')",
-            "getSighash('function NFT_PROXY_OPERATOR_ROLE()')"
+            "isApprovedForAll(address,address)",
+            "totalSupply(uint256)",
+            "creators(uint256)"
           ]
         }
       }
     },
-    "GNUSNFTCollectionName": { 
+    "GNUSNFTCollectionName": {
       "priority": 80,
       "versions": {
-        "0.0":{}
-      } 
+        "0.0": {}
+      }
     },
     "GNUSControl": {
       "priority": 110,
       "versions": {
-        "0.0": {
-        },
+        "0.0": {},
         "2.3": {
           "deployInit": "GNUSControl_Initialize230()"
         }
