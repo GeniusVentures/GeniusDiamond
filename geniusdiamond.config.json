@@ -90,7 +90,10 @@
     "GNUSBridge": {
       "priority": 115,
       "versions": {
-        "0.0": {}
+        "0.0": {},
+        "2.5": {
+          "fromVersions": [0.0, 2.4]
+        }
       }
     },
     "GNUSWithdrawLimiter": {

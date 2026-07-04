@@ -6,7 +6,9 @@
       "address": "0xeC20bDf2f9f77dc37Ee8313f719A3cbCFA0CD1eB",
       "tx_hash": "0x52e805ac946f940b5a6471dc996f1305991ab0478e6c7e1aa35a813920fce73c",
       "version": 0,
-      "funcSelectors": ["0x1f931c1c"],
+      "funcSelectors": [
+        "0x1f931c1c"
+      ],
       "verified": true
     },
     "DiamondLoupeFacet": {
@@ -46,7 +48,10 @@
       "tx_hash": "0xb56fe529ab660b5ff023bed159d5c0e22c58f7af35adefe3b923ee7ab3847325",
       "version": 0,
       "verified": true,
-      "funcSelectors": ["0xa2dd2453", "0xcd53d08e"]
+      "funcSelectors": [
+        "0xa2dd2453",
+        "0xcd53d08e"
+      ]
     },
     "GNUSNFTFactory": {
       "address": "0x918E994Da08FF78A70D6e81dc3A19aD930024F98",
@@ -84,6 +89,7 @@
       "address": "0xAd47AC7B669CA8e6b1497BD4F3b6056c30704EE4",
       "tx_hash": "0x35bb2a876bcb080c25f63df644d2250e431acee7ec8f72b0e9af94be71445165",
       "version": 2.4,
+      "verified": true,
       "funcSelectors": [
         "0xd5391393",
         "0xdd62ed3e",
@@ -101,21 +107,25 @@
         "0xa9059cbb",
         "0x23b872dd",
         "0x441a3e70"
-      ],
-      "verified": true
+      ]
     },
     "GeniusAI": {
       "address": "0xa7A35Bf2035C35be384532D897C7E8Daf6692F12",
       "tx_hash": "0xbe7609e9f8048e10798e6653f2715f895a9939500976a3a97aa5fbab159db78a",
       "version": 0,
       "verified": true,
-      "funcSelectors": ["0x6ea9fd36", "0x31d6388d"]
+      "funcSelectors": [
+        "0x6ea9fd36",
+        "0x31d6388d"
+      ]
     },
     "GNUSNFTCollectionName": {
       "address": "0x59d8d9dab55CF87478b0bb307188D0FE3F3425ac",
       "tx_hash": "0xd86f6613215ae1290a685d200e0bc9b5734c6920d7957a764f1aa2fc39af89d3",
       "version": 0,
-      "funcSelectors": ["0x06fdde03"],
+      "funcSelectors": [
+        "0x06fdde03"
+      ],
       "verified": true
     },
     "ERC20TransferBatch": {
@@ -123,7 +133,11 @@
       "tx_hash": "0x9e577141c96500db2df5590a33cd67d85fe69f5c8e2ae426181e459ba191b588",
       "version": 2,
       "verified": true,
-      "funcSelectors": ["0x7c88e3d9", "0x3b3e672f", "0x1bdc02ba"]
+      "funcSelectors": [
+        "0x7c88e3d9",
+        "0x3b3e672f",
+        "0x1bdc02ba"
+      ]
     },
     "GNUSControl": {
       "address": "0x46ADb9f0CC91dA9dC6FdD3340fa0ac4934a4A578",
@@ -147,7 +161,9 @@
       "tx_hash": "0x5a02cea3b2e71bf045037b1954292cb61383a60d5901da1f7e7c3e4a0684a62d",
       "version": 0,
       "verified": true,
-      "funcSelectors": ["0x01e33667"]
+      "funcSelectors": [
+        "0x01e33667"
+      ]
     }
   },
   "ExternalLibraries": {
