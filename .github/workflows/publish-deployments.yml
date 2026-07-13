@@ -2,9 +2,10 @@ name: Publish Deployments
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
     paths:
       - 'deployments/geniusdiamond*.json'
+  workflow_dispatch:
 
 jobs:
   release:
