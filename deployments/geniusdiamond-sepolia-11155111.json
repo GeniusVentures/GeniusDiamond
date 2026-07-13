@@ -97,7 +97,7 @@
     "GNUSBridge": {
       "address": "0xef01A64d9EC4a5380B1d5E8dE5Ff7D93cEd56BCB",
       "tx_hash": "0x1f0c1428ca7569cc86e3c760cf19ad04d1236f2ddf3f7408f459967b453c3a06",
-      "version": 2.4,
+      "version": 2.5,
       "verified": true,
       "funcSelectors": [
         "0xd5391393",
