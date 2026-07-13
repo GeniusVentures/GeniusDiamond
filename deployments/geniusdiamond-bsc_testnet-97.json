@@ -6,7 +6,9 @@
       "address": "0x5e5443C23Fa2B5A69F6B1A174A2D9E67AbA2117a",
       "tx_hash": "0x1a64f3502f221bdb3453e07cdeeaa00037b8853937d1d9a70d631c1c270815b8",
       "version": 0,
-      "funcSelectors": ["0x1f931c1c"],
+      "funcSelectors": [
+        "0x1f931c1c"
+      ],
       "verified": true
     },
     "DiamondLoupeFacet": {
@@ -45,7 +47,10 @@
       "address": "0x55206d3647c045fA28B14C2E1713a8E8a0F465Ff",
       "tx_hash": "0xa36804fbdd23cd988572722da585adf2826c3a4865cfd33fa4aac184d76bdbbd",
       "version": 0,
-      "funcSelectors": ["0xa2dd2453", "0xcd53d08e"],
+      "funcSelectors": [
+        "0xa2dd2453",
+        "0xcd53d08e"
+      ],
       "verified": true
     },
     "GNUSNFTFactory": {
@@ -108,21 +113,30 @@
       "address": "0x182b78dDfd52199ec6582EbD2987E0aBe1C1bDF7",
       "tx_hash": "0x9a28b58541f01ea67e33d73c987c45799fc007c0de1ba38580ad28e915121e2b",
       "version": 0,
-      "funcSelectors": ["0x6ea9fd36", "0x31d6388d"],
+      "funcSelectors": [
+        "0x6ea9fd36",
+        "0x31d6388d"
+      ],
       "verified": true
     },
     "GNUSNFTCollectionName": {
       "address": "0xf2A11DfAdF5256bC27F7Dcde1E6898C3067097af",
       "tx_hash": "0xb9f560aaa96d6657d7f230afd93dbd7ab23d36e7357c7166f760f4b2d9af6bc3",
       "version": 0,
-      "funcSelectors": ["0x06fdde03"],
+      "funcSelectors": [
+        "0x06fdde03"
+      ],
       "verified": true
     },
     "ERC20TransferBatch": {
       "address": "0x34Aa1c9f996BaDC688dF2149F72cC6e6B842575e",
       "tx_hash": "0xcdbe624ac32d466f7df1c31ee6129cc0e5803d22d8ea1312f6afa4d1387c55e5",
       "version": 2,
-      "funcSelectors": ["0x7c88e3d9", "0x3b3e672f", "0x1bdc02ba"],
+      "funcSelectors": [
+        "0x7c88e3d9",
+        "0x3b3e672f",
+        "0x1bdc02ba"
+      ],
       "verified": true
     },
     "GNUSControl": {
@@ -146,7 +160,9 @@
       "address": "0xB76042F7edF3Ee7AECc3143cA46A2f357491EBC0",
       "tx_hash": "0xd8158e797faa02d93cd2dfab449742c1e9eb3f7b4ec74748dd992f2bc922c354",
       "version": 0,
-      "funcSelectors": ["0x01e33667"],
+      "funcSelectors": [
+        "0x01e33667"
+      ],
       "verified": true
     }
   },
