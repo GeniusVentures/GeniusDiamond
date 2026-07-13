@@ -3,6 +3,8 @@ name: Publish Deployments
 on:
   push:
     branches: [main]
+    paths:
+      - 'deployments/geniusdiamond*.json'
 
 jobs:
   release:
@@ -12,20 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Aggregate deployment files
+      - name: Generate deployments.json
         run: node scripts/aggregate.mjs
 
-      - name: Check for changes
-        id: changed
-        run: |
-          if git diff --exit-code deployments/deployments.json; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: Create release
-        if: steps.changed.outputs.changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ github.run_number }}
