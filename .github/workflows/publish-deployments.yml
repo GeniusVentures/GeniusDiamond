@@ -1,0 +1,19 @@
+name: Publish Deployments
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aggregate deployment files
+        run: node scripts/aggregate.mjs
+
+      - name: Upload deployments.json to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: deployments/deployments.json
