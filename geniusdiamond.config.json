@@ -1,5 +1,5 @@
 {
-  "protocolVersion": 2.5,
+  "protocolVersion": 3.0,
   "protocolInitFacet": "DiamondInitFacet",
   "protocolExcludeFuncSelectors": [],
   "facets": {
@@ -33,6 +33,13 @@
           "fromVersions": [
             0.0,
             2.0
+          ]
+        },
+        "3.0": {
+          "fromVersions": [
+            0.0,
+            2.0,
+            2.3
           ]
         }
       }
@@ -93,6 +100,20 @@
         "0.0": {},
         "2.5": {
           "fromVersions": [0.0, 2.4]
+        },
+        "3.0": {
+          "fromVersions": [0.0, 2.4, 2.5]
+        }
+      }
+    },
+    "GNUSTreasury": {
+      "priority": 117,
+      "versions": {
+        "3.0": {
+          "deployInit": "",
+          "upgradeInit": "",
+          "deployInitSignature": "GNUSTreasury_Initialize300(uint256)",
+          "upgradeInitSignature": "GNUSTreasury_Initialize300(uint256)"
         }
       }
     },
