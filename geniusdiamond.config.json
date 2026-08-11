@@ -1,5 +1,5 @@
 {
-  "protocolVersion": 3.0,
+  "protocolVersion": 2.6,
   "protocolInitFacet": "DiamondInitFacet",
   "protocolExcludeFuncSelectors": [],
   "facets": {
@@ -35,7 +35,7 @@
             2.0
           ]
         },
-        "3.0": {
+        "2.6": {
           "deployInit": "GNUSNFTFactory_Initialize230()",
           "upgradeInit": "GNUSNFTFactory_Initialize230()",
           "fromVersions": [
@@ -103,7 +103,7 @@
         "2.5": {
           "fromVersions": [0.0, 2.4]
         },
-        "3.0": {
+        "2.6": {
           "fromVersions": [0.0, 2.4, 2.5]
         }
       }
@@ -111,11 +111,9 @@
     "GNUSTreasury": {
       "priority": 117,
       "versions": {
-        "3.0": {
+        "2.6": {
           "deployInit": "",
-          "upgradeInit": "",
-          "deployInitSignature": "GNUSTreasury_Initialize300(uint256)",
-          "upgradeInitSignature": "GNUSTreasury_Initialize300(uint256)"
+          "upgradeInit": ""
         }
       }
     },
@@ -142,7 +140,7 @@
             2.41
           ]
         },
-        "3": {
+        "2.6": {
           "deployInit": "diamondInitialize250()",
           "upgradeInit": "diamondInitialize250()",
           "fromVersions": [
