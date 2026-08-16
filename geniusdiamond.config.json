@@ -112,7 +112,7 @@
       "priority": 117,
       "versions": {
         "2.6": {
-          "deployInit": "",
+          "deployInit": "GNUSTreasury_Initialize260()",
           "upgradeInit": ""
         }
       }
