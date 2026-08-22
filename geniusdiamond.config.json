@@ -1,5 +1,5 @@
 {
-  "protocolVersion": 2.6,
+  "protocolVersion": 2.7,
   "protocolInitFacet": "DiamondInitFacet",
   "protocolExcludeFuncSelectors": [],
   "facets": {
@@ -125,6 +125,14 @@
         }
       }
     },
+    "GNUSLifecycle": {
+      "priority": 119,
+      "versions": {
+        "2.7": {
+          "fromVersions": [0.0, 2.4, 2.5, 2.6]
+        }
+      }
+    },
     "GNUSWithdrawLimiter": {
       "priority": 120,
       "versions": {
@@ -158,6 +166,19 @@
             2.4,
             2.41,
             2.5
+          ]
+        },
+        "2.7": {
+          "deployInit": "diamondInitialize250()",
+          "upgradeInit": "diamondInitialize250()",
+          "fromVersions": [
+            0.0,
+            2.2,
+            2.3,
+            2.4,
+            2.41,
+            2.5,
+            2.6
           ]
         }
       }
