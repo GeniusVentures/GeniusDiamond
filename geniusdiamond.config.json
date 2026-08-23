@@ -133,6 +133,14 @@
         }
       }
     },
+    "GNUSLifecycleMint": {
+      "priority": 121,
+      "versions": {
+        "2.7": {
+          "fromVersions": [0.0, 2.4, 2.5, 2.6]
+        }
+      }
+    },
     "GNUSWithdrawLimiter": {
       "priority": 120,
       "versions": {
