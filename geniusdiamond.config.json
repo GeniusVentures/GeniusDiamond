@@ -141,6 +141,14 @@
         }
       }
     },
+    "GNUSLicensing": {
+      "priority": 122,
+      "versions": {
+        "2.6": {
+          "fromVersions": [0.0, 2.4, 2.5]
+        }
+      }
+    },
     "GNUSWithdrawLimiter": {
       "priority": 120,
       "versions": {
