@@ -108,6 +108,14 @@
         }
       }
     },
+    "GNUSBridgeAttestor": {
+      "priority": 116,
+      "versions": {
+        "2.6": {
+          "fromVersions": [0.0, 2.4, 2.5]
+        }
+      }
+    },
     "GNUSTreasury": {
       "priority": 117,
       "versions": {
